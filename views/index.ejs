@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>travel-ideas</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Travel Ideas Kickstart</h1>
+    <% if (user) { %>
+    <p>Welcome <%= user.firstName %></p>
+    <p><a href="/logout">Logout</a></p>
+    <% } else { %>
+    <p><a href="/auth/google">Login with Google</a></p>
+    <% } %>
+  </body>
+</html>
