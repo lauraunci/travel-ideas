@@ -5,13 +5,28 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <title>Places to Visit</title>
 </head>
 <body>
     <h1>Places to Visit</h1>
-
-
-
-
+    <table>
+        <thead>
+            <tr>   
+                <th>City</th>
+                <th>Country</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% trips.forEach(function(t) { %>
+                <tr>
+                    <td><%= t.cityName %></td>
+                    <td><%= t.countryName %></td>
+                    <td><a href="/trips/<%= t._id %>">Details</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
 </body>
 </html>

@@ -4,7 +4,7 @@ var tripsCtrl = require('../controllers/trips');
 
 router.get('/new', tripsCtrl.new);
 router.post('/', tripsCtrl.create);
-//router.get('/', tripsCtrl.index);
+router.get('/', tripsCtrl.index);
 //router.get('/:id', tripsCtrl.show);
 
 module.exports = router;
