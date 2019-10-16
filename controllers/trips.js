@@ -6,6 +6,15 @@ const index = (req, res) => {
     });
 };
 
+const show = (req, res) => {
+    Trip.findById(req.params.id, function(err, trip) {
+        if (!trip) {
+            return res.redirect('/trips');
+        }
+        res.render('trips/show', { title: "Trip Details", trip});
+    });
+};
+
 const newTrip = (req, res) => {
     res.render('trips/new', { title: 'Add Trip'});
 };
@@ -21,6 +30,7 @@ const create = (req, res) => {
 
 module.exports = {
     index,
+    show,
     new: newTrip,
     create
 };

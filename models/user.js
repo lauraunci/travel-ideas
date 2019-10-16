@@ -1,8 +1,8 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
  
-var userSchema = new Schema({
+const userSchema = new Schema({
     firstName: String,
     lastName: String,
     googleId: String,
