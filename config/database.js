@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 mongoose.connect(process.env.DATABASE_URL,
-    {useNewUrlParser: true}
+    {useNewUrlParser: true, useUnifiedTopology: true,  useFindAndModify: false}
 );
 
  // shortcut to mongoose.connection object

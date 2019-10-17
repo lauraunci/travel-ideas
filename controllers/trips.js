@@ -28,9 +28,17 @@ const create = (req, res) => {
    });
 };
 
+const deleteTrip = (req, res) => {
+    Trip.findOneAndRemove({_id: req.params.id}, function(err, trip) {  
+        if (err) throw err;
+        res.redirect('/trips')
+    });
+}
+
 module.exports = {
     index,
     show,
     new: newTrip,
-    create
+    create,
+    deleteTrip
 };

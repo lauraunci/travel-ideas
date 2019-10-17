@@ -28,7 +28,7 @@
             <th>Date</th>
             <th>Review</th>
             <th>Rating</th>
-            <th>UserId</th>
+            <!-- <th>UserId</th> -->
             <th></th>
         </tr>
         </thead>
@@ -38,10 +38,10 @@
             <td><%= review.createdAt.toLocaleDateString() %></td>
             <td><%= review.content %></td>
             <td><%= review.rating %></td>
-            <td><%= review.firstName%></td>
+            <!-- <td><%= review.firstName%></td> -->
             <td>
-                <form action="/trips/<%= trip._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
-                 <input type="submit" value="Delete"/>
+                <form action="/trips/<%= trip._id %>/reviews/<%= review._id %>" method="DELETE">
+                 <input type="submit" value="Delete" />
                 </form> 
             </td>
         </tr>

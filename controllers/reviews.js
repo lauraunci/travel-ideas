@@ -11,6 +11,10 @@ const create = (req, res) => {
 
 const deleteReview = (req, res) => {
   Trip.findById(req.params.id, function(err, trip) {
+    if (!trip) {
+      return res.redirect('/trips');
+    }
+
     const review = trip.reviews.id(req.params.review_id);
     if (!review) {
       return res.redirect(`/trips/${trip.id}`);
