@@ -16,7 +16,6 @@ const tripSchema = new Schema(
         cityName: String,
         countryName: String,
         reviews: [reviewSchema]
-    //googleId: String
     },
     {
         timestamps: true

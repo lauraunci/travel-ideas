@@ -2,15 +2,17 @@
 <html>
   <head>
     <title>travel-ideas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Travel Ideas Kickstart</h1>
+    <h1>Travel Ideas</h1>
     <% if (user) { %>
     <p>Welcome <%= user.firstName %></p>
     <p><a href="/logout">Logout</a></p>
     <% } else { %>
-    <p><a href="/auth/google">Login with Google</a></p>
+    <a class="btn btn-outline-danger" href="/auth/google">Login with Google</a>
+    <div id="machu_picchu"><img src="https://cdn.pixabay.com/photo/2016/08/04/15/46/machu-picchu-1569324_1280.jpg" alt="Machu Picchu"></div>
     <% } %>
   </body>
 </html>

@@ -19,7 +19,7 @@ const deleteReview = (req, res) => {
     if (!review) {
       return res.redirect(`/trips/${trip.id}`);
     }
-
+    
     review.remove();
     trip.save(function(err) {
       return res.redirect(`/trips/${trip.id}`);

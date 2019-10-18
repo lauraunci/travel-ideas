@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%= title %></title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    <header>
-      <!-- <img src=" "> -->
-        <nav>
-    <a href="/trips/new" <%- title === 'Add Trip' ? 'class="active"' : '' %>>ADD TRIP</a>
-    <a href="/trips" <%- title === 'All Trips' ? 'class="active"' : '' %>>ALL TRIPS</a>
-        </nav>
-    </header>
+
+  <nav class="rightAlign">
+    <ul>    
+      <li><button class="btn btn-secondary"><a href="/trips/new">Add Trip</a></button></li>
+      <li><button class="btn btn-secondary"><a href="/trips">All Trips</a></button></li>
+      <li><button class="btn btn-danger"><a href="/logout">Log Out</a></button></li>
+    </ul>
+  </nav>
+    
   
